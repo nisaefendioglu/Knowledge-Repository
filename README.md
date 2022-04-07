@@ -1,4 +1,4 @@
-# Random Pool of Information
+# Knowledge Repository
 
 A mobile application that allows you to get random information every time you enter the application.
 
