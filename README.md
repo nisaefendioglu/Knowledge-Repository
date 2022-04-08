@@ -2,6 +2,12 @@
 
 A mobile application that allows you to get random information every time you enter the application.
 
+## Google Play Store :
+
+<img width="120" alt="AppIcon" src="https://user-images.githubusercontent.com/48391281/162450236-92f4a995-c93e-45db-93bb-fd4fbe37e1b5.png">
+
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.nisaefendioglu.randomUselessFacts)
+
 <br>
 Screenshots of the app :
 <br>
