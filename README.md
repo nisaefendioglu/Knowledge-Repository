@@ -20,7 +20,7 @@ Screenshots of the app :
 
 MIT License
 
-Copyright (c) 2021 Nisa Efendioğlu
+Copyright (c) 2022 Nisa Efendioğlu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
