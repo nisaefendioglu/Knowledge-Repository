@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface ApiInterface {
 
     @GET("random.json?language=en")
-    fun getRandom() : Call<RandomUseless>
+    fun getRandom(): Call<RandomUseless>
 }
