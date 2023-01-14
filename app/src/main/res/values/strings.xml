@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Random Facts</string>
     <string name="reminder">Come back for some useless information.</string>
+    <string name="failure">Please check your internet connection.</string>
 </resources>

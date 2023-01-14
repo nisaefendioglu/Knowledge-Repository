@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_dark_mode_24.xml" value="0.1955" />
+        <entry key="app/src/main/res/drawable/ic_baseline_light_mode_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.1705" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>
