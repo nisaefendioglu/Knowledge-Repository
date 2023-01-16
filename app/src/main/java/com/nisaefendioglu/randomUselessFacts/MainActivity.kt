@@ -3,7 +3,7 @@ package com.nisaefendioglu.randomUselessFacts
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.isVisible
+import android.widget.ImageButton
 import com.nisaefendioglu.randomUselessFacts.model.RandomUseless
 import com.nisaefendioglu.randomUselessFacts.service.ApiClient
 import com.nisaefendioglu.randomUselessFacts.service.ApiInterface
@@ -17,14 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        darkLightMode()
         getCallApi()
 
         swipeRefreshLayout.setOnRefreshListener {
             getCallApi()
             swipeRefreshLayout.isRefreshing = false
         }
-
     }
+
 
     private fun getCallApi() {
         val clientRest: ApiInterface = ApiClient.create(ApiInterface::class.java)
@@ -43,10 +44,28 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<RandomUseless?>, t: Throwable) {
-                info.text = "Please check your internet connection."
+                info.text = R.string.failure.toString()
             }
 
         })
+    }
+
+
+    private fun darkLightMode(){
+        val theme = findViewById<ImageButton>(R.id.theme)
+        var count = 0
+        theme.setOnClickListener {
+            count++
+            if (count % 2 == 0) {
+                theme.setImageResource(R.drawable.ic_baseline_dark_mode_24)
+                constraintLayout.setBackgroundColor(resources.getColor(R.color.white))
+                reminder.setTextColor(resources.getColor(R.color.black))
+            } else {
+                theme.setImageResource(R.drawable.ic_baseline_light_mode_24)
+                constraintLayout.setBackgroundColor(resources.getColor(R.color.black))
+                reminder.setTextColor(resources.getColor(R.color.white))
+            }
+        }
     }
 
 }
