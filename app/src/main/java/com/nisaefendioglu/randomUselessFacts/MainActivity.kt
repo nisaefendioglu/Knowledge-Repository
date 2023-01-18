@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.nisaefendioglu.randomUselessFacts.model.RandomUseless
 import com.nisaefendioglu.randomUselessFacts.service.ApiClient
 import com.nisaefendioglu.randomUselessFacts.service.ApiInterface
@@ -13,6 +16,8 @@ import retrofit2.Response
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    lateinit var mAdView: AdView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             getCallApi()
             swipeRefreshLayout.isRefreshing = false
         }
+
+        MobileAds.initialize(this) {}
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
     }
 
 
@@ -51,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun darkLightMode(){
+    private fun darkLightMode() {
         val theme = findViewById<ImageButton>(R.id.theme)
         var count = 0
         theme.setOnClickListener {
